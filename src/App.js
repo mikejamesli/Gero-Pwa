@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from '@material-ui/core/Button';
-import BottomNav from './Components/bottomnav'
-import NavBar from './Components/navbar'
-
+import React, { Component } from "react";
+import "./App.css";
+import BottomNav from "./Components/bottomnav";
+import NavBar from "./Components/navbar";
+import Home from "./Home";
+import About from "./About";
+import Tv from "./Tv";
+import News from "./News";
+import Contact from "./Contact";
+import { Router } from "@reach/router";
 
 class App extends Component {
   state = {
-    value: 0,
+    value: 0
   };
 
   handleChange = (event, value) => {
@@ -21,21 +24,16 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <NavBar></NavBar>
-          <img src={logo} className="App-logo" alt="logo" />
-          <Button variant="contained" color="primary">
-            Hello World
-          </Button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <NavBar />
+          <Router>
+            <Home path="/" />
+            <About path="/about" />
+            <News path="/news" />
+            <Contact path="/contact" />
+            <Tv path="/tv" />
+          </Router>
         </header>
-        <BottomNav></BottomNav>
+        <BottomNav />
       </div>
     );
   }
