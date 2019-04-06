@@ -1,0 +1,56 @@
+.home {
+  position: relative;
+}
+
+.bg {
+  /* Full height */
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/pickmywoof/image/upload/v1551091839/AdobeStock_201297453.jpg");
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-shaded {
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.2;
+}
+
+.site-inner {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .site-inner {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+  }
+
+  .bg {
+    /* Full height */
+    height: 100vh;
+
+    background-image: url("https://res.cloudinary.com/pickmywoof/image/upload/v1551091839/AdobeStock_201297453.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
